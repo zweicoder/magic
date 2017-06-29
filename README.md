@@ -19,6 +19,14 @@ or use `wget`
 wget https://raw.githubusercontent.com/zweicoder/magic/master/magic.sh -O /usr/local/bin/magic
 ```
 
+or `git`
+
+```
+git clone https://github.com/zweicoder/magic.git
+cd magic/
+./install.sh
+```
+
 ## Usage
 
 Create a new script with `#!/usr/bin/env bash` header and gives it executable permissions. Yes I'm that lazy.
