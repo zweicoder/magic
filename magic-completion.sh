@@ -11,7 +11,7 @@ _GetComps () {
     local cur
     cur=${COMP_WORDS[COMP_CWORD]}
 
-    DIR=`./upsearch .magic`
+    DIR=`upsearch .magic`
     choices=''
     if [ $DIR ]; then
         choices=`ls $DIR`
@@ -21,4 +21,4 @@ _GetComps () {
     return 0
 }
 
-complete -F _GetComps -o filenames ./magic.sh
+complete -F _GetComps -o filenames magic
