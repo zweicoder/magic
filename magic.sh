@@ -17,7 +17,7 @@ if ([ $# == 0 ] || [ $1 == 'help' ]); then
     exit 1
 fi
 
-DIR=`./upsearch .magic`
+DIR=`upsearch .magic`
 
 if [ $1 == 'new' ]; then
     if [ $# -ne 2 ]; then
