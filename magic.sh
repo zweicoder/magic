@@ -18,6 +18,9 @@ if ([ $# == 0 ] || [ $1 == 'help' ]); then
 fi
 
 DIR=`upsearch .magic`
+if [ $DIR = '/' ]; then
+    DIR=`pwd`
+fi
 
 if [ $1 == 'new' ]; then
     if [ $# -ne 2 ]; then

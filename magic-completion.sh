@@ -12,6 +12,9 @@ _GetComps () {
     cur=${COMP_WORDS[COMP_CWORD]}
 
     DIR=`upsearch .magic`
+    if [ $DIR = '/' ]; then
+        DIR=`pwd`
+    fi
     choices=''
     if [ $DIR ]; then
         choices=`ls $DIR`
