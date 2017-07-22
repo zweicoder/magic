@@ -37,7 +37,12 @@ if [ $1 == 'new' ]; then
         exit 1
     fi
 
-    echo '#!/usr/bin/env bash' > $DIR/$2
+    cat > $DIR/$2 <<EOM
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+EOM
     chmod +x $DIR/$2
     echo "Created file at $DIR/$2"
 else
